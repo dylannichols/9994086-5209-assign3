@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -20,23 +20,37 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="#">Dashboard <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="#">Map</a>
-                <a class="nav-item nav-link" href="login.html">Sign In</a>
+                <a class="nav-item nav-link" href="#">Sign In</a>
             </div>
         </div>
     </nav>
 
-    <div class="main-grid">
-        <div class="text-container">In an emergency, you don't want to be separated from your whanau. With Find Your Whanau, you won't be stuck at home worrying, you'll be able to act. </div>
+    <div class="login-grid">
+        <form class="register-form">
+            <h1 class="register-h1">Register</h1>
+            <div class="form-group">
+                <label for="nameInput">Name</label>
+                <input type="text" class="form-control form-control-lg" id="nameInput" aria-describedby="emailHelp" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Repeat Password</label>
+                <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Repeat Password">
+            </div>
+            <button type="submit" class="btn btn-primary login-btn">Register</button>
+        </form>
 
-        <button type="button" class="btn btn-primary btn-lg button1">Login</button>
-        <div class="or">OR</div>
-        <button type="button" class="btn btn-secondary btn-lg button2">Register</button>
-
-        <img src="img/whanau_orig.jpeg" alt="person with arms outstretched" class="img img1">
-        <img src="img/Huria_03.jpg" alt="marae" class="img img2">
-        <img src="img/term-insurance-required-for-parents.jpg" alt="family" class="img img3">
-
+        <img src="img/parents.jpg" alt="text" class="login-img login-img1">
+        <img src="img/fam.png" alt="family" class="login-img login-img2">
     </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -4,6 +4,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     max-height: 100vh;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 nav {
@@ -40,7 +41,11 @@ nav {
 a,
 a:hover {
     color: white;
+    text-decoration: none;
 }
+
+
+/* Homepage CSS */
 
 .main-grid {
     display: grid;
@@ -110,7 +115,8 @@ a:hover {
 
 /* CSS Directly related to the login and register pages */
 
-.login-grid {
+.login-grid,
+.login-grid2 {
     display: grid;
     grid-template-columns: 100px 2fr 3fr 2fr 100px;
     grid-template-rows: repeat(3, 1fr);
@@ -139,7 +145,8 @@ form {
     grid-row: 2;
 }
 
-.login-btn {
+.login-btn,
+.register-btn {
     width: 200px;
     height: 100px;
 }
@@ -170,6 +177,10 @@ form h1 {
     grid-row-gap: 50px;
 }
 
+.dash-phone-img {
+    display: none;
+}
+
 .add-family {
     grid-row: 1;
     grid-column: 2;
@@ -183,7 +194,7 @@ form h1 {
     grid-row: 2;
     grid-column: 1/5;
     display: grid;
-    grid-template-columns: 1fr 2fr 1.5fr;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
 }
 
 .find-whanau {
@@ -194,12 +205,12 @@ form h1 {
 .dash-img1 {
     grid-row: 1;
     grid-column: 1;
+    margin-left: 15vh;
 }
 
 .dash-img2 {
     grid-row: 1;
     grid-column: 3;
-    justify-self: start;
 }
 
 .dash-img {
@@ -218,7 +229,6 @@ form h1 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 4fr;
-    align-items: center;
     grid-column-gap: 20px;
 }
 
@@ -248,7 +258,6 @@ form h1 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 4fr;
-    align-items: center;
     grid-column-gap: 20px;
 }
 
@@ -272,7 +281,6 @@ form h1 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 4fr;
-    align-items: center;
     grid-column-gap: 20px;
 }
 
@@ -290,4 +298,657 @@ form h1 {
 .dash-btn-img-3 {
     grid-row: 1 / 3;
     grid-column: 1;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: portrait) {
+    body {
+        background-image: url(../img/phone-background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-height: 100vh;
+    }
+    .btn {
+        background: #900713;
+    }
+    .nav-item {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+    .nav-link {
+        color: black !important;
+    }
+    .navbar-custom {
+        background-color: none;
+    }
+    .navbar-brand {
+        font-size: 2em;
+        width: 70%;
+    }
+    .icon-img {
+        display: none;
+    }
+    /* Phone CSS 
+    for 
+    home page
+    */
+    .main-grid {
+        grid-template-columns: 30px 1fr 30px;
+        grid-template-rows: 1fr 1fr 0.3fr 1fr;
+        grid-gap: 0;
+    }
+    .img {
+        display: none;
+    }
+    .text-container {
+        grid-row: 1;
+        grid-column: 2;
+        font-size: 1em;
+        padding-top: 0;
+    }
+    .btn {
+        width: 250px;
+        height: 100px;
+    }
+    .button1 {
+        margin-top: 30px;
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .or {
+        grid-row: 3;
+        grid-column: 2;
+    }
+    .button2 {
+        grid-row: 4;
+        grid-column: 2;
+    }
+    /* PHONE CSS
+    FOR
+    LOGIN
+    AND
+    REGISTER
+    */
+    .login-img {
+        display: none;
+    }
+    .login-grid {
+        grid-template-columns: 30px 1fr 30px;
+        grid-gap: 0;
+    }
+    form {
+        grid-row: 1;
+        grid-column: 2;
+        margin-top: 0px;
+    }
+    form h1 {
+        margin-bottom: 0;
+    }
+    .login-btn {
+        width: 190px;
+        height: 90px;
+    }
+    .register-h1 {
+        font-size: 2.5em;
+    }
+    /* PHONE CSS
+    FOR
+    DASHBOARD
+    */
+    .dashboard-grid {
+        grid-template-columns: 10px 1fr 10px;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 12px;
+        margin-top: 12px;
+    }
+    .dashboard-button {
+        width: 90vw;
+        height: 25vh;
+        background: #900713;
+    }
+    .add-family {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .message-whanau {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .dash-second-grid {
+        grid-row: 3;
+        grid-column: 1;
+        grid-template-columns: 10px 1fr 10px;
+        grid-template-rows: 1fr;
+        grid-gap: 12px;
+    }
+    .dash-img {
+        display: none;
+    }
+    .find-whanau {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .dash-btn-img {
+        height: 20vh;
+        width: auto;
+    }
+    .dash-grid-1,
+    .dash-grid-2,
+    .dash-grid-3 {
+        align-items: start;
+        grid-column-gap: 5px;
+    }
+    .dash-h1 {
+        font-size: 1.5em;
+    }
+    .dash-text {
+        font-size: 0.9em;
+    }
+    /* CSS 
+For
+Add
+Family Member
+*/
+    .add-family-h1 {
+        font-size: 1.8em;
+        margin-top: 5px;
+    }
+    .add-family-btn {
+        width: 200px;
+        height: 80px;
+    }
+    /* CSS
+    For
+    Message Whanau
+    */
+    .message-h1 {
+        text-align: center;
+    }
+    .message-grid {
+        display: grid;
+        grid-template-columns: 20px 1fr 20px;
+        grid-gap: 10px;
+        margin-top: 10px;
+    }
+    .btn-block {
+        grid-column: 2;
+        width: 80vw;
+        font-size: 1.5em;
+        height: 10vh;
+        color: black;
+        background: white;
+        border-radius: 0;
+    }
+    .own-text {
+        grid-column: 2;
+    }
+    .submit-btn {
+        grid-column: 2;
+        width: 200px;
+        justify-self: center;
+        height: 80px;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) {
+    body {
+        background-image: url(../img/phone-background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-height: 100vh;
+    }
+    .navbar-brand {
+        font-size: 2em;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .icon-img {
+        margin-top: -20px;
+    }
+    .nav-item {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+    .nav-link {
+        color: black !important;
+    }
+    .img {
+        display: none;
+    }
+    .main-grid {
+        grid-template-columns: 1fr 30px 1fr;
+        justify-items: center;
+        grid-gap: 20px;
+    }
+    .text-container {
+        grid-column-start: 1;
+        text-align: center;
+        padding-top: 5px;
+        font-size: 1.2em;
+    }
+    .btn-lg {
+        height: 100px;
+        width: 250px;
+    }
+    .button1 {
+        grid-column: 1;
+    }
+    .or {
+        grid-column: 2;
+    }
+    .button2 {
+        grid-column: 3;
+    }
+    /* Phone 
+        horizontal
+        CSS 
+        for
+        Login Page
+        */
+    .login-img {
+        display: none;
+    }
+    .login-grid {
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    form {
+        grid-column: 2;
+        margin-top: 0;
+    }
+    .login-h1 {
+        font-size: 2em;
+    }
+    .login-btn {
+        height: 80px;
+        width: 150px;
+    }
+    /* Phone
+        horizontal CSS
+        for
+        register page
+        */
+    .login-grid2 {
+        display: block;
+    }
+    .register-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30px 1fr 1fr;
+        margin-left: 20px;
+    }
+    .register-h1 {
+        font-size: 2em;
+        grid-column: 1/3;
+        grid-row: 1;
+        text-align: start;
+        justify-self: center;
+    }
+    .column1 {
+        grid-column: 1;
+    }
+    .column2 {
+        grid-column: 2;
+    }
+    .row1 {
+        grid-row: 2;
+    }
+    .row2 {
+        grid-row: 3;
+    }
+    .form-control-lg {
+        width: 300px;
+    }
+    .register-btn {
+        height: 80px;
+        justify-self: center;
+        grid-column: 1/3;
+    }
+    /* Dashboard
+    for 
+    phone horizontal
+    */
+    .dashboard-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 10px;
+        margin-left: 10px;
+        grid-gap: 15px;
+    }
+    .dash-img {
+        display: none;
+    }
+    .add-family {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .message-whanau {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .find-whanau {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .dashboard-button {
+        width: 47vw;
+        height: 35vh;
+    }
+    .dash-text {
+        font-size: 0.9em;
+    }
+    .dash-h1 {
+        font-size: 1em;
+    }
+    .dash-phone-img {
+        display: block;
+        grid-row: 2;
+        grid-column: 2;
+        width: 47vw;
+        height: 35vh;
+        border: 2px solid white;
+    }
+    /* Add]
+    Family 
+    CSS
+    For
+    Horizontal
+    */
+    .family-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 20px;
+        grid-template-rows: 40px 100px 1fr 1fr;
+        margin-left: 20px;
+    }
+    .add-family-h1 {
+        font-size: 2em;
+        grid-row: 1;
+        grid-column: 1/3;
+        text-align: center;
+    }
+    .add-family-btn {
+        height: 80px;
+        grid-column: 1/3;
+        grid-row: 4;
+        width: 180px;
+        justify-self: center;
+    }
+    .name {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .email {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .message {
+        grid-row: 2/3;
+        grid-column: 2;
+    }
+    /* CSS
+    For
+    Horizontal
+    Message
+    */
+    .message-h1 {
+        text-align: center;
+    }
+    .message-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 10px;
+        grid-template-rows: repeat(3, 17vh);
+        margin-top: 10px;
+        grid-gap: 15px;
+    }
+    .btn-block {
+        grid-column: 1;
+        width: 45vw;
+        font-size: 1em;
+        height: 14vh;
+        color: black;
+        background: white;
+        border-radius: 0;
+        margin-left: 20px;
+    }
+    .btn1 {
+        grid-row: 1;
+    }
+    .btn2 {
+        grid-row: 2;
+    }
+    .btn3 {
+        grid-row: 3;
+    }
+    .own-text {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .submit-btn {
+        grid-column: 2;
+        width: 180px;
+        justify-self: center;
+        height: 80px;
+        grid-row: 3;
+        margin-top: -30px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    body {
+        background-image: url(../img/tablet-background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-height: 100vh;
+    }
+    .btn {
+        background: #900713;
+    }
+    .nav-item {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+    .nav-link {
+        color: black !important;
+    }
+    .navbar-custom {
+        background-color: none;
+    }
+    .navbar-brand {
+        font-size: 2.5em;
+        width: 70%;
+    }
+    /* Phone CSS 
+    for 
+    home page
+    */
+    .main-grid {
+        grid-template-columns: 30px 1fr 30px;
+        grid-template-rows: 1fr 1fr 0.3fr 1fr;
+        grid-gap: 20px;
+    }
+    .img {
+        display: none;
+    }
+    .text-container {
+        grid-row: 1;
+        grid-column: 2;
+        font-size: 1.5em;
+        padding-top: 0;
+    }
+    .btn {
+        width: 400px;
+        height: 150px;
+        font-size: 3em;
+    }
+    .button1 {
+        margin-top: 30px;
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .or {
+        grid-row: 3;
+        grid-column: 2;
+    }
+    .button2 {
+        grid-row: 4;
+        grid-column: 2;
+    }
+    /* PHONE CSS
+    FOR
+    LOGIN
+    AND
+    REGISTER
+    */
+    .login-grid {
+        margin-top: 50px;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-gap: 30px;
+        justify-items: center;
+    }
+    .login-img {
+        display: block;
+        width: auto;
+        height: 20vh;
+        margin-top: 50px;
+    }
+    .login-img1 {
+        grid-column: 2;
+    }
+    .login-img2 {
+        grid-column: 3;
+    }
+    form {
+        grid-row: 1;
+        grid-column: 2/4;
+        margin-top: 0px;
+    }
+    .login-h1 {
+        font-size: 4em;
+    }
+    .form-control-lg {
+        width: 400px;
+        grid-column: 2/4;
+    }
+    form h1 {
+        margin-bottom: 0;
+    }
+    .login-btn {
+        width: 190px;
+        height: 90px;
+    }
+    .register-h1 {
+        margin-top: 30px;
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+    .register-img {
+        display: none;
+    }
+    .register-btn {
+        width: 300px;
+        height: 100px;
+    }
+    /* PHONE CSS
+    FOR
+    DASHBOARD
+    */
+    .dashboard-grid {
+        grid-template-columns: 10px 1fr 10px;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 12px;
+        margin-top: 12px;
+    }
+    .dashboard-button {
+        width: 90vw;
+        height: 25vh;
+        background: #900713;
+    }
+    .add-family {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .message-whanau {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .dash-second-grid {
+        grid-row: 3;
+        grid-column: 1;
+        grid-template-columns: 10px 1fr 10px;
+        grid-template-rows: 1fr;
+        grid-gap: 12px;
+    }
+    .dash-img {
+        display: none;
+    }
+    .find-whanau {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .dash-btn-img {
+        height: 20vh;
+        width: auto;
+    }
+    .dash-grid-1,
+    .dash-grid-2,
+    .dash-grid-3 {
+        align-items: start;
+        grid-column-gap: 5px;
+    }
+    .dash-h1 {
+        font-size: 2em;
+    }
+    .dash-text {
+        font-size: 1.5em;
+    }
+    /* CSS 
+For
+Add
+Family Member
+*/
+    .add-family-h1 {
+        font-size: 1.8em;
+        margin-top: 5px;
+        text-align: center;
+    }
+    .add-family-btn {
+        width: 200px;
+        height: 80px;
+    }
+    .message,
+    .form-control-lg {
+        width: 60vw;
+    }
+    /* CSS
+    For
+    Message Whanau
+    */
+    .message-h1 {
+        text-align: center;
+    }
+    .message-grid {
+        display: grid;
+        grid-template-columns: 20px 1fr 20px;
+        grid-gap: 10px;
+        margin-top: 10px;
+    }
+    .btn-block {
+        grid-column: 2;
+        width: 80vw;
+        font-size: 1.5em;
+        height: 10vh;
+        color: black;
+        background: white;
+        border-radius: 0;
+    }
+    .own-text {
+        grid-column: 2;
+    }
+    .submit-btn {
+        grid-column: 2;
+        width: 200px;
+        justify-self: center;
+        height: 80px;
+    }
 }

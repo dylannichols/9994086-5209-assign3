@@ -38,6 +38,10 @@ nav {
     justify-content: center;
 }
 
+nav a {
+    color: white !important;
+}
+
 a,
 a:hover {
     color: white;
@@ -168,10 +172,14 @@ form h1 {
 
 /* dashboard css */
 
+.dash-h1 {
+    text-align: center;
+}
+
 .dashboard-grid {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 10vw 1fr 1fr 10vw;
+    grid-template-columns: 6vw 1fr 1fr 6vw;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 50px;
     grid-row-gap: 50px;
@@ -220,7 +228,7 @@ form h1 {
 }
 
 .dashboard-button {
-    width: 35vw;
+    width: 38vw;
     height: 30vh;
     border: 2px solid white;
 }
@@ -395,6 +403,9 @@ form h1 {
     FOR
     DASHBOARD
     */
+    .dash-h1 {
+        display: none;
+    }
     .dashboard-grid {
         grid-template-columns: 10px 1fr 10px;
         grid-template-rows: repeat(3, 1fr);
@@ -479,6 +490,9 @@ Family Member
         background: white;
         border-radius: 0;
     }
+    .message-img {
+        display: none;
+    }
     .own-text {
         grid-column: 2;
     }
@@ -488,11 +502,51 @@ Family Member
         justify-self: center;
         height: 80px;
     }
+    /* CSS For
+    Phone 
+    Message
+    Received
+    */
+    .receive-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .receive-h1 {
+        grid-column: 1/3;
+    }
+    .receive-btn1 {
+        background: grey;
+        border: 2px solid grey;
+    }
+    .receive-btn,
+    .receive-own-text {
+        height: 50px;
+        grid-column: 1/3;
+        width: 90vw;
+    }
+    .yes-btn {
+        width: 30vw;
+        grid-column: 1;
+        margin-bottom: 10px;
+    }
+    .no-btn {
+        width: 30vw;
+        grid-column: 2;
+    }
+    .receive-own-text {
+        margin-bottom: 30px;
+    }
+    .receive-submit {
+        width: 150px;
+        height: 80px;
+        grid-column: 1/3;
+    }
 }
 
 @media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) {
     body {
-        background-image: url(../img/phone-background.png);
+        background-image: url(../img/phone-hor-background.png);
         background-size: cover;
         background-repeat: no-repeat;
         max-height: 100vh;
@@ -608,6 +662,9 @@ Family Member
     for 
     phone horizontal
     */
+    .dash-h1 {
+        display: none;
+    }
     .dashboard-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -731,6 +788,77 @@ Family Member
         grid-row: 3;
         margin-top: -30px;
     }
+    .message-img {
+        display: none;
+    }
+    /* CSS For
+    Phone 
+    Message
+    Received
+    */
+    .receive-grid {
+        display: grid;
+        grid-template-columns: 3fr 2fr 2fr 3fr;
+        grid-template-rows: 20px 1fr 10px 1fr 2fr 1.5fr;
+        justify-items: center;
+        align-items: center;
+        grid-gap: 5px;
+    }
+    .receive-h1 {
+        font-size: 1.2em;
+    }
+    .receive-h1-1 {
+        grid-column: 2/4;
+        grid-row: 1;
+        margin-top: 10px;
+    }
+    .receive-h1-2 {
+        grid-column: 2/4;
+        grid-row: 3;
+    }
+    .receive-btn1 {
+        background: grey;
+        border: 2px solid grey;
+        grid-column: 2/4;
+        grid-row: 2;
+    }
+    .receive-btn2 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .receive-btn3 {
+        grid-row: 4;
+        grid-column: 4;
+    }
+    .receive-own-text {
+        grid-row: 5;
+        grid-column: 2/4;
+        width: 300px;
+    }
+    .receive-btn {
+        height: 40px;
+        width: 30vw;
+    }
+    .yes-btn {
+        width: 80px;
+        height: 40px;
+        grid-row: 4;
+        grid-column: 2;
+    }
+    .no-btn {
+        height: 40px;
+        width: 80px;
+        grid-row: 4;
+        grid-column: 3;
+    }
+    .receive-submit {
+        width: 130px;
+        height: 60px;
+        grid-row: 6;
+        grid-column: 2/4;
+        margin-top: -60px;
+        font-size: 1.5em;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -753,10 +881,6 @@ Family Member
     }
     .navbar-custom {
         background-color: none;
-    }
-    .navbar-brand {
-        font-size: 2.5em;
-        width: 70%;
     }
     /* Phone CSS 
     for 
@@ -853,6 +977,9 @@ Family Member
     FOR
     DASHBOARD
     */
+    .dash-h1 {
+        display: none;
+    }
     .dashboard-grid {
         grid-template-columns: 10px 1fr 10px;
         grid-template-rows: repeat(3, 1fr);
@@ -926,29 +1053,340 @@ Family Member
     */
     .message-h1 {
         text-align: center;
+        font-size: 2em;
     }
     .message-grid {
         display: grid;
-        grid-template-columns: 20px 1fr 20px;
-        grid-gap: 10px;
-        margin-top: 10px;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-gap: 20px;
+        margin-top: 30px;
+        justify-items: center;
     }
     .btn-block {
-        grid-column: 2;
-        width: 80vw;
+        grid-column: 2/4;
+        width: 60vw;
         font-size: 1.5em;
-        height: 10vh;
+        height: 5vh;
         color: black;
         background: white;
         border-radius: 0;
     }
     .own-text {
-        grid-column: 2;
+        grid-column: 2/4;
+        width: 60vw;
     }
     .submit-btn {
-        grid-column: 2;
+        grid-column: 2/4;
         width: 200px;
         justify-self: center;
         height: 80px;
+    }
+    .message-img {
+        height: 20vh;
+        width: auto;
+        border: 2px solid white;
+    }
+    .message-img1 {
+        grid-column: 2;
+    }
+    .message-img2 {
+        grid-column: 3;
+    }
+    /* CSS For
+    Tablet 
+    Message
+    Received
+    */
+    .receive-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        grid-row-gap: 20px;
+    }
+    .receive-h1 {
+        grid-column: 1/3;
+        font-size: 3em;
+    }
+    .receive-btn1 {
+        background: grey;
+        border: 2px solid grey;
+    }
+    .receive-btn,
+    .receive-own-text {
+        height: 70px;
+        grid-column: 1/3;
+        width: 70vw;
+    }
+    .yes-btn {
+        width: 20vw;
+        grid-column: 1;
+        margin-bottom: 10px;
+    }
+    .no-btn {
+        width: 20vw;
+        grid-column: 2;
+    }
+    .receive-own-text {
+        margin-bottom: 30px;
+    }
+    .receive-submit {
+        width: 200px;
+        height: 100px;
+        grid-column: 1/3;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    body {
+        background-image: url(../img/tab-hor-background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-height: 100vh;
+    }
+    .btn {
+        background: #900713;
+    }
+    .nav-link {
+        color: white !important;
+    }
+    .navbar-custom {
+        background-color: none;
+    }
+    /* Horizontal
+    Tablet CSS 
+    for 
+    home page
+    */
+    .main-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 40vh;
+        grid-column-gap: 50px;
+        align-items: center;
+        justify-items: center;
+    }
+    .img2 {
+        display: none
+    }
+    .text-container {
+        grid-row: 1;
+        grid-column: 2/5;
+        font-size: 25px;
+        padding-top: 50px;
+        text-align: center;
+    }
+    .btn {
+        width: 350px;
+        height: 150px;
+        font-size: 3em;
+    }
+    .button1 {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .or {
+        grid-column: 3;
+        grid-row: 2;
+        text-align: center;
+        font-size: 40px;
+        align-self: center;
+    }
+    .button2 {
+        grid-row: 2;
+        grid-column: 4;
+    }
+    .img {
+        margin-top: -100px;
+    }
+    /* HORIZONTAL
+    TABLET CSS
+    FOR
+    LOGIN
+    AND
+    REGISTER
+    */
+    .login-grid,
+    .login-grid2 {
+        display: grid;
+        grid-template-columns: 10px 2fr 2fr 2fr 10px;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    form {
+        grid-column: 3;
+        grid-row: 1/4;
+        margin-top: 20px;
+    }
+    .login-img {
+        width: 250px;
+        height: auto;
+        border: 2px solid white;
+    }
+    .login-img1 {
+        grid-column: 2;
+        grid-row: 2/4;
+    }
+    .login-img2 {
+        grid-column: 4;
+        grid-row: 2/4;
+    }
+    .form-control-lg {
+        width: 350px !important;
+    }
+    .login-btn,
+    .register-btn {
+        width: 200px;
+        height: 100px;
+    }
+    form h1 {
+        font-size: 5em;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+    .register-form {
+        margin-top: 0;
+    }
+    .register-h1 {
+        margin-bottom: 0;
+    }
+    .register-btn {
+        width: 300px;
+        height: 100px;
+    }
+    /* PHONE CSS
+    FOR
+    DASHBOARD
+    */
+    .dashboard-grid {
+        grid-template-columns: 10px 1fr 1fr 10px;
+        grid-column-gap: 10px;
+        margin-top: 20px;
+    }
+    .dash-img {
+        display: none;
+    }
+    .dashboard-button {
+        width: 48vw;
+    }
+    /*
+For
+Add
+Family Member
+*/
+    .add-family-h1 {
+        font-size: 2em;
+        margin-top: 5px;
+        text-align: center;
+    }
+    .add-family-btn {
+        height: 100px;
+        width: 200px;
+    }
+    /* CSS
+    For
+    Message Whanau
+    */
+    .message-h1 {
+        text-align: center;
+        font-size: 3em;
+        grid-row: 1;
+    }
+    .message-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 1px repeat(3, 9vh);
+        grid-gap: 20px;
+        margin-top: 30px;
+        justify-items: center;
+    }
+    .btn-block {
+        grid-column: 2/4;
+        width: 44vw;
+        font-size: 1.5em;
+        height: 8vh;
+        color: black;
+        background: white;
+        border-radius: 0;
+    }
+    .btn1 {
+        grid-row: 2;
+    }
+    .btn2 {
+        grid-row: 3;
+    }
+    .btn3 {
+        grid-row: 4;
+    }
+    .own-text {
+        grid-column: 2/4;
+        width: 44vw;
+        grid-row: 5;
+    }
+    .submit-btn {
+        grid-column: 2/4;
+        width: 200px;
+        justify-self: center;
+        height: 80px;
+        grid-row: 6;
+    }
+    .message-img {
+        height: 23vh;
+        width: auto;
+        border: 2px solid white;
+    }
+    .message-img1 {
+        grid-column: 1;
+        grid-row: 2/6;
+        align-self: center;
+    }
+    .message-img2 {
+        grid-column: 4;
+        grid-row: 2/6;
+        align-self: center;
+    }
+    /* CSS For
+    Tablet
+    Horizontal 
+    Message
+    Received
+    */
+    .receive-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        grid-row-gap: 10px;
+        grid-column-gap: 150px;
+    }
+    .receive-h1 {
+        grid-column: 1/3;
+        font-size: 2em;
+    }
+    .receive-btn1 {
+        background: grey;
+        border: 2px solid grey;
+    }
+    .receive-btn,
+    .receive-own-text {
+        height: 60px;
+        grid-column: 1/3;
+        width: 50vw;
+    }
+    .yes-btn {
+        width: 15vw;
+        grid-column: 1;
+        margin-bottom: 10px;
+        justify-self: end;
+    }
+    .no-btn {
+        width: 15vw;
+        grid-column: 2;
+        justify-self: start;
+    }
+    .receive-own-text {
+        margin-bottom: 30px;
+    }
+    .receive-submit {
+        margin-top: 10px;
+        width: 200px;
+        height: 100px;
+        grid-column: 1/3;
     }
 }

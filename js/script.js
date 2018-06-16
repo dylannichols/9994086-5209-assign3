@@ -8,14 +8,19 @@
         var img1 = document.querySelector(".dash-img1")
         var img2 = document.querySelector(".dash-img2")
         var form = document.querySelector(".dash-form")
-        var addFamilyLink = document.querySelector(".add-family-link")
+        var messageGrid = document.querySelector(".message-grid")
+        var addFamilyLink = document.querySelectorAll(".link")
 
-        addFamilyLink.addEventListener("click", function(e) {
-            e.preventDefault()
-        })
+        for (var i = 0; i < addFamilyLink.length; i++) {
+            addFamilyLink[i].addEventListener("click", function(e) {
+                e.preventDefault()
+            })
+        }
 
         addFamily.addEventListener("click", function(e) {
-            addFamily.remove()
+            messageGrid.style.display = "none"
+            messageWhanau.style.display = "block"
+            addFamily.style.display = "none"
             secondGrid.style.gridTemplateColumns = "1fr"
             img1.style.display = "none"
             img2.style.display = "none"
@@ -26,5 +31,21 @@
             form.style.gridRow = "1/3"
         })
 
+        messageWhanau.addEventListener("click", function(e) {
+            form.style.display = "none"
+            addFamily.style.display = "block"
+            messageWhanau.style.display = "none"
+            secondGrid.style.gridTemplateColumns = "1fr"
+            img1.style.display = "none"
+            img2.style.display = "none"
+            findWhanau.style.gridColumn = "1"
+            secondGrid.style.gridColumn = "2"
+            messageGrid.style.display = "grid"
+            messageGrid.style.gridColumn = "3"
+            messageGrid.style.gridRow = "1/3"
+        })
+
+
+
     }
-})()
+})();

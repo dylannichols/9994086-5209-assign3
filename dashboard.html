@@ -45,8 +45,21 @@
             <button type="submit" class="btn btn-primary add-family-btn">Invite</button>
         </form>
 
+        <div class="message-grid">
+            <h3 class="message-h1">Mesage Your Whanau</h3>
+
+            <button type="button" class="btn btn-primary btn-lg btn-block btn1">Are you safe?</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block btn2">Do you need a ride?</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block btn3">Do you need shelter?</button>
+            <div class="form-group own-text">
+
+                <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="5" placeholder="Or enter your own message here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary submit-btn">Send</button>
+        </div>
+
         <div class="add-family dashboard-button">
-            <a href="add-family.html" class="add-family-link">
+            <a href="add-family.html" class="link">
                 <div class="dash-grid-1"><img src="img/Family-with-Transparent-Background.jpg" alt="family" class="dash-btn-img dash-btn-img-1">
                     <h3 class="dash-h1-1 dash-h1">Add Family Member</h3>
                     <div class="dash-text-1 dash-text">Invite a family member to the app so that you can find and message them in an emergency.
@@ -55,7 +68,7 @@
             </a>
         </div>
         <div class="message-whanau dashboard-button">
-            <a href="message-whanau.html">
+            <a href="message-whanau.html" class="link">
                 <div class="dash-grid-2"><img src="img/message.png" alt="letter" class="dash-btn-img dash-btn-img-2">
                     <h3 class="dash-h1-2 dash-h1">Message My Whanau</h3>
                     <div class="dash-text-2 dash-text">Quickly message your whole family in an emergency to make sure they're okay or see if they need help.
@@ -65,12 +78,14 @@
         </div>
         <div class="dash-second-grid">
             <div class="find-whanau dashboard-button">
-                <div class="dash-grid-3">
-                    <img src="img/map.png" alt="map" class="dash-btn-img dash-btn-img-3">
-                    <h3 class="dash-h1-3 dash-h1">Find My Whanau</h3>
-                    <div class="dash-text-3 dash-text">In an emergency, find your family members on a map and message them to see if they are okay.
+                <a href="map.html" class="link">
+                    <div class="dash-grid-3">
+                        <img src="img/map.png" alt="map" class="dash-btn-img dash-btn-img-3">
+                        <h3 class="dash-h1-3 dash-h1">Find My Whanau</h3>
+                        <div class="dash-text-3 dash-text">In an emergency, find your family members on a map and message them to see if they are okay.
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <img src="img/whanu.jpg" alt="family" class="dash-img dash-img1">
             <img src="img/gathering-at-a-marae.jpg" alt="people at a marae" class="dash-img dash-img2">

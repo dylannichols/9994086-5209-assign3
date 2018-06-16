@@ -25,11 +25,28 @@
         </div>
     </nav>
 
-    <h1 class="dash-h1">Dashboard</h1>
+    <h1 class="dash-h1 dash-h1-main">Dashboard</h1>
     <div class="dashboard-grid">
 
+        <form class="dash-form">
+            <h1 class="add-family-h1">Add Family Member</h1>
+            <div class="form-group name">
+                <label for="nameInput">Name</label>
+                <input type="text" class="form-control form-control-lg" id="nameInput" aria-describedby="emailHelp" placeholder="Enter name">
+            </div>
+            <div class="form-group email">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group message">
+                <label for="exampleFormControlTextarea1">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary add-family-btn">Invite</button>
+        </form>
+
         <div class="add-family dashboard-button">
-            <a href="add-family.html">
+            <a href="add-family.html" class="add-family-link">
                 <div class="dash-grid-1"><img src="img/Family-with-Transparent-Background.jpg" alt="family" class="dash-btn-img dash-btn-img-1">
                     <h3 class="dash-h1-1 dash-h1">Add Family Member</h3>
                     <div class="dash-text-1 dash-text">Invite a family member to the app so that you can find and message them in an emergency.
@@ -64,7 +81,7 @@
 
 
 
-
+    <script src=js/script.js></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

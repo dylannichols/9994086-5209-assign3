@@ -129,7 +129,7 @@ a:hover {
 .login-grid2 {
     display: grid;
     grid-template-columns: 100px 2fr 3fr 2fr 100px;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1 0.5fr;
     grid-column-gap: 50px;
 }
 
